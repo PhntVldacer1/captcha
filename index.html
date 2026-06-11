@@ -5,13 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Phnt's Club Captcha</title>
   <style>
-    /* Theme variables fixing the broken CSS elements */
     :root {
       --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       --border-radius-md: 8px;
       --border-radius-lg: 14px;
       
-      /* Light Mode Palette */
       --color-background-primary: #ffffff;
       --color-background-secondary: #f9f8ff;
       --color-background-success: #ecfdf5;
@@ -30,7 +28,6 @@
       --color-border-danger: #fecaca;
     }
 
-    /* Dark Mode Palette (matches canvas script defaults) */
     @media (prefers-color-scheme: dark) {
       :root {
         --color-background-primary: #13111c;
@@ -324,7 +321,6 @@
       border: 0.5px solid rgba(124,58,237,0.3);
     }
     
-    /* Utility style to visually hide the accessibility heading */
     .sr-only {
       position: absolute;
       width: 1px;
@@ -536,7 +532,7 @@ function verifyCaptcha(){
       attempts++;
     }
     fb.className="feedback bad";
-    fb.innerHTML='<svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 3l7 7M10 3l-7 7"/></svg> Not quite — try again!';
+    fb.innerHTML='<svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 3l7 7M10 3l-7 7"/></svg> Bro what, are u a bot? Lol, try again';
     document.getElementById("ci").value="";
     setTimeout(()=>newPhrase(),400);
   }
