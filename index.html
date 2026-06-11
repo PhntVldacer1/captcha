@@ -311,7 +311,7 @@ function verifyCaptcha() {
     document.querySelector(".btn-verify").disabled = true;
   } else {
     fb.className = "feedback-msg error";
-    fb.textContent = "Bro what, are u a bot? lol, try again";
+    fb.textContent = "Bro what, are u a bot? Lol, try again";
     document.getElementById("captchaInput").value = "";
     currentPhrase = phrases[Math.floor(Math.random() * phrases.length)];
     setTimeout(() => drawCaptcha(currentPhrase), 300);
